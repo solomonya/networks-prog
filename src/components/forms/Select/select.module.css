@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+}
+
+.label {
+  font-size: 1.325rem;
+}
+
+.select {
+  padding: 5px;
+  border-radius: 8px;
+  font-size: 1.25rem;
+}

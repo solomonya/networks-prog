@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.btn {
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  background: none;
+  font-size: 0.875rem;
+  border-radius: 8px;
+}

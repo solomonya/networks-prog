@@ -1,0 +1,36 @@
+Query: SELECT `main`.`Epmloyee`.`id`, `main`.`Epmloyee`.`firstName`, `main`.`Epmloyee`.`lastName`, `main`.`Epmloyee`.`position` FROM `main`.`Epmloyee` WHERE 1=1 LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 11:52:48 AM 
+Query: SELECT `main`.`Epmloyee`.`id`, `main`.`Epmloyee`.`firstName`, `main`.`Epmloyee`.`lastName`, `main`.`Epmloyee`.`position` FROM `main`.`Epmloyee` WHERE 1=1 LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 11:52:48 AM 
+Query: SELECT `main`.`Epmloyee`.`id`, `main`.`Epmloyee`.`firstName`, `main`.`Epmloyee`.`lastName`, `main`.`Epmloyee`.`position` FROM `main`.`Epmloyee` WHERE 1=1 LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 11:52:48 AM 
+Query: SELECT `main`.`Epmloyee`.`id`, `main`.`Epmloyee`.`firstName`, `main`.`Epmloyee`.`lastName`, `main`.`Epmloyee`.`position` FROM `main`.`Epmloyee` WHERE 1=1 LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 11:52:48 AM 
+Query: SELECT `main`.`Epmloyee`.`id`, `main`.`Epmloyee`.`firstName`, `main`.`Epmloyee`.`lastName`, `main`.`Epmloyee`.`position` FROM `main`.`Epmloyee` WHERE 1=1 LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 11:52:48 AM 
+Query: SELECT 1, Duration: 0ms, Date: 3/17/2023 12:04:53 PM 
+Query: SELECT `main`.`Epmloyee`.`id`, `main`.`Epmloyee`.`firstName`, `main`.`Epmloyee`.`lastName`, `main`.`Epmloyee`.`position` FROM `main`.`Epmloyee` WHERE 1=1 LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:04:53 PM 
+Query: SELECT `main`.`Epmloyee`.`id`, `main`.`Epmloyee`.`firstName`, `main`.`Epmloyee`.`lastName`, `main`.`Epmloyee`.`position` FROM `main`.`Epmloyee` WHERE 1=1 LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:04:57 PM 
+Query: SELECT 1, Duration: 0ms, Date: 3/17/2023 12:08:00 PM 
+Query: SELECT `main`.`Epmloyee`.`id`, `main`.`Epmloyee`.`firstName`, `main`.`Epmloyee`.`lastName`, `main`.`Epmloyee`.`position` FROM `main`.`Epmloyee` WHERE 1=1 LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:08:00 PM 
+Query: SELECT 1, Duration: 0ms, Date: 3/17/2023 12:08:27 PM 
+Query: SELECT `main`.`Epmloyee`.`id`, `main`.`Epmloyee`.`firstName`, `main`.`Epmloyee`.`lastName`, `main`.`Epmloyee`.`position` FROM `main`.`Epmloyee` WHERE 1=1 LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:08:27 PM 
+Query: SELECT `main`.`Report`.`id`, `main`.`Report`.`title`, `main`.`Report`.`description`, `main`.`Report`.`startedTime`, `main`.`Report`.`finishTime` FROM `main`.`Report` WHERE 1=1 LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:08:39 PM 
+Query: SELECT 1, Duration: 0ms, Date: 3/17/2023 12:08:43 PM 
+Query: SELECT `main`.`Epmloyee`.`id`, `main`.`Epmloyee`.`firstName`, `main`.`Epmloyee`.`lastName`, `main`.`Epmloyee`.`position` FROM `main`.`Epmloyee` WHERE 1=1 LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:08:43 PM 
+Query: SELECT `main`.`Report`.`id`, `main`.`Report`.`title`, `main`.`Report`.`description`, `main`.`Report`.`startedTime`, `main`.`Report`.`finishTime` FROM `main`.`Report` WHERE 1=1 LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:08:48 PM 
+Query: SELECT 1, Duration: 0ms, Date: 3/17/2023 12:09:01 PM 
+Query: SELECT `main`.`Report`.`id`, `main`.`Report`.`title`, `main`.`Report`.`description`, `main`.`Report`.`startedTime`, `main`.`Report`.`finishTime` FROM `main`.`Report` WHERE 1=1 LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:09:01 PM 
+Query: SELECT 1, Duration: 0ms, Date: 3/17/2023 12:09:43 PM 
+Query: SELECT `main`.`Report`.`id`, `main`.`Report`.`title`, `main`.`Report`.`description`, `main`.`Report`.`startedTime`, `main`.`Report`.`finishTime` FROM `main`.`Report` WHERE 1=1 LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:09:43 PM 
+Query: SELECT 1, Duration: 0ms, Date: 3/17/2023 12:10:07 PM 
+Query: SELECT `main`.`Listener`.`id`, `main`.`Listener`.`email`, `main`.`Listener`.`fullName` FROM `main`.`Listener` WHERE (`main`.`Listener`.`email` = ? AND 1=1) LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:10:07 PM 
+Query: BEGIN, Duration: 0ms, Date: 3/17/2023 12:10:07 PM 
+Query: INSERT INTO `main`.`Listener` (`email`, `fullName`) VALUES (?,?) RETURNING `id` AS `id`, Duration: 0ms, Date: 3/17/2023 12:10:07 PM 
+Query: SELECT `main`.`Report`.`id` FROM `main`.`Report` WHERE (`main`.`Report`.`id` = ? AND 1=1) LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:10:07 PM 
+Query: INSERT OR IGNORE INTO `main`.`_ListenerToReport` (`A`, `B`) VALUES (?,?), Duration: 0ms, Date: 3/17/2023 12:10:07 PM 
+Query: SELECT `main`.`Listener`.`id`, `main`.`Listener`.`email`, `main`.`Listener`.`fullName` FROM `main`.`Listener` WHERE `main`.`Listener`.`id` = ? LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:10:07 PM 
+Query: COMMIT, Duration: 3ms, Date: 3/17/2023 12:10:07 PM 
+Query: SELECT `main`.`Report`.`id`, `main`.`Report`.`title`, `main`.`Report`.`description`, `main`.`Report`.`startedTime`, `main`.`Report`.`finishTime` FROM `main`.`Report` WHERE 1=1 LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:10:09 PM 
+Query: SELECT `main`.`Report`.`id`, `main`.`Report`.`title`, `main`.`Report`.`description`, `main`.`Report`.`startedTime`, `main`.`Report`.`finishTime` FROM `main`.`Report` WHERE `main`.`Report`.`id` = ? LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:10:11 PM 
+Query: SELECT `main`.`_ListenerToReport`.`B`, `main`.`_ListenerToReport`.`A` FROM `main`.`_ListenerToReport` WHERE `main`.`_ListenerToReport`.`B` IN (?), Duration: 0ms, Date: 3/17/2023 12:10:11 PM 
+Query: SELECT `main`.`Listener`.`id`, `main`.`Listener`.`email`, `main`.`Listener`.`fullName` FROM `main`.`Listener` WHERE `main`.`Listener`.`id` IN (?,?) LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:10:11 PM 
+Query: SELECT `main`.`_ReportToSpeaker`.`A`, `main`.`_ReportToSpeaker`.`B` FROM `main`.`_ReportToSpeaker` WHERE `main`.`_ReportToSpeaker`.`A` IN (?), Duration: 0ms, Date: 3/17/2023 12:10:11 PM 
+Query: SELECT `main`.`Speaker`.`id`, `main`.`Speaker`.`fullName` FROM `main`.`Speaker` WHERE `main`.`Speaker`.`id` IN (?) LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:10:11 PM 
+Query: SELECT `main`.`_AreaToReport`.`B`, `main`.`_AreaToReport`.`A` FROM `main`.`_AreaToReport` WHERE `main`.`_AreaToReport`.`B` IN (?), Duration: 0ms, Date: 3/17/2023 12:10:11 PM 
+Query: SELECT `main`.`Area`.`id`, `main`.`Area`.`title` FROM `main`.`Area` WHERE `main`.`Area`.`id` IN (?) LIMIT ? OFFSET ?, Duration: 0ms, Date: 3/17/2023 12:10:11 PM 

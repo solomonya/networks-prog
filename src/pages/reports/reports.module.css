@@ -1,0 +1,13 @@
+.layout {
+  padding: 30px;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.tableColumn,
+.tableHeadColumn {
+  border: 1px solid black;
+  padding: 8px;
+}

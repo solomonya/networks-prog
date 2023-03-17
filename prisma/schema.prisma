@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Listener {
+  id Int @id @default(autoincrement())
+  email String @unique
+  fullName String
+  reports Report[]
+}
+
+model Speaker {
+  id Int @id @default(autoincrement())
+  fullName String
+  reports Report[]
+
+}
+
+model Report {
+  id Int @id @default(autoincrement())
+  title String
+  description String
+  startedTime DateTime
+  finishTime DateTime
+  listeners Listener[]
+  areas Area[]
+  speakers Speaker[]
+}
+
+model Area {
+  id Int @id @default(autoincrement())
+  title String
+  reports Report[]
+}
+
+model Epmloyee {
+  id Int @default(autoincrement()) @id
+  firstName String
+  lastName String
+  position String
+}
+
+model RequestHistory {
+  id Int @default(autoincrement()) @id
+  createdAt DateTime @default(now())
+  duration Int
+  query String
+}

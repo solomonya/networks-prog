@@ -1,0 +1,13 @@
+.header {
+  padding: 30px;
+}
+
+.nav {
+  display: flex;
+  gap: 0 20px;
+}
+
+.link {
+  color: #2196F3;
+  font-size: 1.25rem;
+}
