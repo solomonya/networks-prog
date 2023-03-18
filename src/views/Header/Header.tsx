@@ -5,14 +5,14 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <Link href={'/'}>
-          <span className={styles.link}>Регистрация</span>
+        <Link href={'/'} className={styles.link}>
+          Регистрация
         </Link>
-        <Link href={'/reports'}>
-          <span className={styles.link}>Доклады</span>
+        <Link href={'/reports'} className={styles.link}>
+          Доклады
         </Link>
-        <Link href={'/employees'}>
-          <span className={styles.link}>Сотрудники</span>
+        <Link href={'/employees'} className={styles.link}>
+          Сотрудники
         </Link>
       </nav>
     </header>

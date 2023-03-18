@@ -19,6 +19,7 @@ export default function Home({ reports }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <h1 className={styles.title}>Регистрация на доклад</h1>
         <ConferencesRegistrationForm reports={reports} />
       </main>
     </>

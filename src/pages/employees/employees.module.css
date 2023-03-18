@@ -1,18 +1,53 @@
 .searchContainer {
   margin-bottom: 20px;
   display: flex;
-  gap: 0 20px;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  width: 400px;
 }
 
 .employeeCard {
-  padding: 5px;
-  border: 1px solid black;
-  display: inline-block;
-  width: 300px;
+  padding: 15px;
+  border: 1px solid #a8a8a8;
+  border-radius: 6px; 
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .employeesContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 10px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.label {
+  font-size: 1.325rem;
+  font-weight: 600;
+}
+
+.input {
+  height: 40px;
+  border: 1px solid #a8a8a8;
+  padding: 0 8px;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.input:focus {
+  outline: 2px solid #186ADE;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.position {
+  display: inline-block;
+  padding: 7px;
+  font-size: 1rem;
+  border: 1.5px solid #186ADE;
+  color: #186ADE;
+  border-radius: 8px;
 }

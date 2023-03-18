@@ -41,8 +41,9 @@ export default function EmployeesPage({ epmloyees }: Props) {
     <main>
       <section>
         <div className={styles.searchContainer}>
-          <label>Поиск сотрудников</label>
+          <label className={styles.label}>Поиск сотрудников</label>
           <input 
+            className={styles.input}
             type={'search'}         
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -55,8 +56,8 @@ export default function EmployeesPage({ epmloyees }: Props) {
                   (emp) => {
                     return (
                       <div className={styles.employeeCard} key={emp.id}>
-                        <h5>{emp.firstName} {emp.lastName}</h5>
-                        <span>{emp.position}</span>
+                        <h3 className={styles.title}>{emp.firstName} {emp.lastName}</h3>
+                        <span className={styles.position}>{emp.position}</span>
                       </div>
                     );
                   }
@@ -70,7 +71,7 @@ export default function EmployeesPage({ epmloyees }: Props) {
   );
 };
 
-function searchCharacters(search: string) {
+async function searchCharacters(search: string) {
   return fetch(
     `http://localhost:3000/api/employees/search/?emp=${search}`,
   )

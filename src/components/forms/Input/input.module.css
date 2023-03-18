@@ -6,13 +6,19 @@
 
 .label {
   font-size: 1.325rem;
+  font-weight: 600;
 }
 
 .input {
-  padding: 5px;
+  padding: 0 8px;
   font-size: 1.25rem;
-  border-radius: 6px;
-  border: 1px solid gray;
+  border-radius: 8px;
+  height: 40px;
+  border: 1px solid #a8a8a8;
+}
+
+.input:focus {
+  outline: 1.5px solid #186ade;
 }
 
 .errorTitle {

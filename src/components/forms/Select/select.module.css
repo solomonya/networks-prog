@@ -6,10 +6,17 @@
 
 .label {
   font-size: 1.325rem;
+  font-weight: 600;
 }
 
 .select {
-  padding: 5px;
+  padding: 0 8px;
   border-radius: 8px;
   font-size: 1.25rem;
+  height: 40px;
+  background-color: #fff;
+}
+
+.select:focus {
+  outline: 1.5px solid #186ade;
 }

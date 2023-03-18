@@ -1,12 +1,18 @@
 .main {
+  padding: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  flex-direction: column;
+  gap: 20px 0;
 }
 
 .layout {
   display: flex;
   flex-direction: column;
   gap: 20px 0;
+}
+
+.title {
+  margin: 0;
 }

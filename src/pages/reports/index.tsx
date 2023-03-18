@@ -1,65 +1,48 @@
-import { ShowList } from "@/components";
+import { NavLink, ShowList } from "@/components";
 import { prisma } from "@/prisma";
 import { Report } from "@prisma/client";
 
 import styles from "./reports.module.css";
 import Link from "next/link";
+import { ColumnType, Table, TableTh } from "@/components/ui/Table/Table";
 
 interface Props {
   reports: Report[];
 }
 
-const ReportKeys = {
-  id: "id",
-  title: "title",
-  description: "description",
-  startedTime: "startedTime",
-  finishTime: "finishTime",
-} as const;
-
-const reportProperties = Object.keys(ReportKeys);
+const reportsTableHeader: TableTh[] = [
+  {
+    title: "№",
+    field: 'id',
+    type: ColumnType.STRING
+  },
+  {
+    title: "Доклад",
+    field: 'title',
+    type: ColumnType.STRING,
+    parserFn: (record) => <NavLink path={`/reports/${record.id}`} title={record.title} />
+  },
+  {
+    title: "Время начала",
+    field: 'startedTime',
+    type: ColumnType.DATETIME
+  },
+  {
+    title: "Время завершения",
+    field: 'finishTime',
+    type: ColumnType.DATETIME
+  },
+  {
+    title: "Описание",
+    field: 'description',
+    type: ColumnType.STRING
+  }
+];
 
 export default function Conferences({ reports }: Props) {
   return (
     <main className={styles.layout}>
-      <table className={styles.table}>
-        <thead className={styles.tableHead}>
-          <tr>
-            <ShowList list={reportProperties}>
-              {(title) => {
-                return (
-                  <th key={title} className={styles.tableHeadColumn}>
-                    {title}
-                  </th>
-                );
-              }}
-            </ShowList>
-          </tr>
-        </thead>
-        <tbody className={styles.tableBody}>
-          <ShowList list={reports}>
-            {(report) => {
-              return (
-                <tr key={report.id} className={styles.tableRow}>
-                  <ShowList list={reportProperties}>
-                    {(title) => {
-                      return (
-                        <td key={title} className={styles.tableColumn}>
-                          {title === ReportKeys.title ? (
-                            <Link href={`/reports/${report.id}`}>{report[title]}</Link>
-                          ) : (
-                            report[title].toString()
-                          )}
-                        </td>
-                      );
-                    }}
-                  </ShowList>
-                </tr>
-              );
-            }}
-          </ShowList>
-        </tbody>
-      </table>
+      <Table tableHead={reportsTableHeader} data={reports ?? []} />
     </main>
   );
 }

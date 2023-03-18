@@ -3,15 +3,21 @@
   flex-direction: column;
   gap: 20px 0px;
   padding: 20px;
-  border: 1px solid black;
-  border-radius: 8px;
+  border: 1px solid #a8a8a8;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .btn {
-  width: 200px;
+  width: 220px;
+  height: 40px;
   margin: 0 auto;
   padding: 10px;
   background: none;
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   border-radius: 8px;
+  border: none;
+  background-color: #186ADE;
+  border-radius: 12px;
+  color: #fff;
 }

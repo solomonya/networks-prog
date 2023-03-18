@@ -1,4 +1,5 @@
 import { ShowList } from "@/components";
+import { ColumnType, Table, TableTh } from "@/components/ui/Table/Table";
 import { prisma } from "@/prisma";
 import { Area, Listener, Report, Speaker } from "@prisma/client";
 import { GetServerSideProps } from "next";
@@ -14,6 +15,24 @@ interface FullReport extends Report {
 interface Props {
   report: FullReport; 
 }
+
+const listenersTableHeader: TableTh[] = [
+  {
+    title: "№",
+    field: "id",
+    type: ColumnType.STRING
+  }, 
+  {
+    title: "Слушатель",
+    field: "fullName",
+    type: ColumnType.STRING
+  },
+  {
+    title: "Почта слушателя",
+    field: "email",
+    type: ColumnType.STRING
+  }
+];
 
 export default function ReportPage({ report }: Props) {
   console.log(report);
@@ -31,44 +50,7 @@ export default function ReportPage({ report }: Props) {
         }
       </ShowList>
       <h2>Слушатели</h2>
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            <ShowList list={Object.keys(report.listeners[0])}>
-              {
-                (title) => {
-                  return (
-                    <th className={styles.tableHeadColumn} key={title}>{title}</th>
-                  );
-                }
-              }
-            </ShowList>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            <ShowList list={report.listeners}>
-              {
-                (listener) => {
-                  return (
-                    <tr key={report.id}>
-                      <ShowList list={Object.keys(report.listeners[0])}>
-                        {
-                          (title) => {
-                            return (
-                              <td className={styles.tableColumn} key={title}>{listener[title]}</td>
-                            );
-                          }
-                        }
-                      </ShowList>
-                    </tr>
-                  );
-                }
-              }
-            </ShowList>
-          }
-        </tbody>
-      </table> 
+      <Table tableHead={listenersTableHeader} data={report.listeners} /> 
     </main>
   );
 }
